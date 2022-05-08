@@ -1,12 +1,12 @@
-package me.whiteship.java8to11.lambda.introduction;
+package me.whiteship.java8to11.section1.introduction;
 
-public class Foo {
+public class Lambda {
 
 	//자바 8이전
 	//익명 내부 클래스(anonymous inner class)
 	/*
 	public static void main(String[] args) {
-		RunSomething runSomething = new RunSomething() {
+		FunctionInterface functionalInterface = new FunctionInterface() {
 			@Override
 			public void doIt() {
 				System.out.println("Hello");
@@ -21,11 +21,11 @@ public class Foo {
 	//함수로 표현 되는 부분도 결국 객체의 정의의 일부라고 볼 수 있음
 	/*
 	public static void main(String[] args) {
-		RunSomething runSomething = () -> {
+		FunctionInterface functionalInterface = () -> {
 			System.out.println("Hello");
 			System.out.println("Lambda");
 		};
-		runSomething.doIt();
+		functionalInterface.doIt();
 	}
 	 */
 
@@ -33,7 +33,7 @@ public class Foo {
 	//예를 들어 함수밖에 있는 값을 참조하거나 변경할 때
 	public static void main(String[] args) {
 
-		RunSomething runSomething = new RunSomething() {
+		FunctionalInterface functionalInterface = new FunctionalInterface() {
 			int baseNumber = 10; // 특정 상태값을 갖기 때문에 pure한 함수라고 볼 수 없음
 
 			@Override
