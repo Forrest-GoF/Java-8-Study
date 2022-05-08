@@ -6,7 +6,7 @@ public class Lambda {
 	//익명 내부 클래스(anonymous inner class)
 	/*
 	public static void main(String[] args) {
-		FunctionInterface functionalInterface = new FunctionInterface() {
+		FunctionPackage functionalInterface = new FunctionPackage() {
 			@Override
 			public void doIt() {
 				System.out.println("Hello");
@@ -21,7 +21,7 @@ public class Lambda {
 	//함수로 표현 되는 부분도 결국 객체의 정의의 일부라고 볼 수 있음
 	/*
 	public static void main(String[] args) {
-		FunctionInterface functionalInterface = () -> {
+		FunctionPackage functionalInterface = () -> {
 			System.out.println("Hello");
 			System.out.println("Lambda");
 		};
