@@ -1,5 +1,6 @@
 package me.whiteship.java8to11.section1.functionalinterface;
 
+import java.util.function.BinaryOperator;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
@@ -68,5 +69,6 @@ public class FunctionPackage {
 
 		//BinaryOperator<T>
 		//BiFunction<T, U, R>의 특수한 형태로, 동일한 타입의 입렵값 두개를 받아 리턴하는 함수 인터페이스
+		BinaryOperator<Integer> sum = (a, b) -> a + b;
 	}
 }
