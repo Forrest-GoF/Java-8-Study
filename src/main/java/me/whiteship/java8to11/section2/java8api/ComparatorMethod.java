@@ -1,11 +1,11 @@
-package me.whiteship.java8to11.section2.java8api.comparatormethod;
+package me.whiteship.java8to11.section2.java8api;
 
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class App {
+public class ComparatorMethod {
 
 	public static void main(String[] args) {
 		List<String> names = new ArrayList<>();
