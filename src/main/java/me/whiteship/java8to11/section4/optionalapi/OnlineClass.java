@@ -1,4 +1,4 @@
-package me.whiteship.java8to11.section4.optional;
+package me.whiteship.java8to11.section4.optionalapi;
 
 import java.util.Optional;
 
@@ -10,7 +10,7 @@ public class OnlineClass {
 
 	private boolean closed;
 
-	public Progress progress;
+	public Progress progress; //Optional을 변수로 쓰는 것도 부적절(있을 수도 없을 수도 있는 변수라는 의미라면 도메인 재설계 필요)
 
 	public OnlineClass(Integer id, String title, boolean closed){
 		this.id = id;
@@ -42,12 +42,12 @@ public class OnlineClass {
 		this.closed = closed;
 	}
 
-	//자바8 이전
-	public Progress getProgress() {
-		return progress;
+	//자바8 이후
+	public Optional<Progress> getProgress() {
+		return Optional.ofNullable(progress); //Optional은 return에서만 쓰기를 권장
 	}
 
-	public void setProgress(Progress progress) {
+	public void setProgress(Progress progress) { //파라미터로 null이 오면 안되기 때문에 Optional을 쓰지 않기를 권장
 		this.progress = progress;
 	}
 }
